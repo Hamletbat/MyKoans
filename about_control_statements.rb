@@ -1,6 +1,6 @@
-require File.expand_path(File.dirname(__FILE__) + '/edgecase')
+require File.expand_path(File.dirname(__FILE__) + '/neo')
 
-class AboutControlStatements < EdgeCase::Koan
+class AboutControlStatements < Neo::Koan
 
   def test_if_then_else_statements
     if true
@@ -87,7 +87,7 @@ class AboutControlStatements < EdgeCase::Koan
       result = result * i
       i += 1
     end
-    assert_equal (1..10).inject {|a,b| a*=b}, result
+    assert_equal __, result
   end
 
   def test_break_statement
@@ -98,7 +98,7 @@ class AboutControlStatements < EdgeCase::Koan
       result = result * i
       i += 1
     end
-    assert_equal Math.gamma(11).to_int, result
+    assert_equal __, result
   end
 
   def test_break_statement_returns_values
@@ -119,7 +119,7 @@ class AboutControlStatements < EdgeCase::Koan
       next if (i % 2) == 0
       result << i
     end
-    assert_equal [*(1..10).step(2)], result
+    assert_equal __, result
   end
 
   def test_for_statement
